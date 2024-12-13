@@ -39,6 +39,14 @@ const MobileMenu = ({ handleRemove }) => {
     setHoverKey(key);
   };
 
+  const handleTouchStart = (key) => {
+    setHoverKey(key);
+  };
+
+  const handleTouchEnd = () => {
+    setHoverKey("");
+  };
+
   if (!menuData) return null;
 
   return (
@@ -48,9 +56,7 @@ const MobileMenu = ({ handleRemove }) => {
           key={menuItem.id}
           className={menuItem.subMenu.length > 0 ? "dropdown" : ""}
         >
-          <Link href={menuItem.link || "#"}>
-            {menuItem.menuItem}
-          </Link>
+          <Link href={menuItem.link || "#"}>{menuItem.menuItem}</Link>
 
           {menuItem.subMenu.length > 0 && (
             <ul
@@ -62,10 +68,10 @@ const MobileMenu = ({ handleRemove }) => {
                   className={subItem.subChild ? "dropdown" : ""}
                   onMouseEnter={() => handleSubClick(subItem.subServices)}
                   onMouseLeave={() => setHoverKey("")}
+                  onTouchStart={() => handleTouchStart(subItem.subServices)}
+                  onTouchEnd={handleTouchEnd}
                 >
-                  <Link href={subItem.link || "#"}>
-                    {subItem.subServices}
-                  </Link>
+                  <Link href={subItem.link || "#"}>{subItem.subServices}</Link>
                   {subItem.subChild && (
                     <ul
                       className={
@@ -75,19 +81,19 @@ const MobileMenu = ({ handleRemove }) => {
                       }
                     >
                       {subItem.subChild.map((child) => {
-                                              const route = child.link
-                                              ? child.link
-                                              : `/${child.childList
-                                                  .toLowerCase()
-                                                  .replace(/\s+/g, "-")
-                                                  .replace(/[&]/g, "and")
-                                                  .replace(/[()]/g, "")
-                                                  .replace(/[^\w-]+/g, "")}`;
-                                              return (
-                                                <li key={child.id}>
-                                                  <Link href={route}>{child.childList}</Link>
-                                                </li>
-                                              );
+                        const route = child.link
+                          ? child.link
+                          : `/${child.childList
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")
+                              .replace(/[&]/g, "and")
+                              .replace(/[()]/g, "")
+                              .replace(/[^\w-]+/g, "")}`;
+                        return (
+                          <li key={child.id}>
+                            <Link href={route}>{child.childList}</Link>
+                          </li>
+                        );
                       })}
                     </ul>
                   )}
