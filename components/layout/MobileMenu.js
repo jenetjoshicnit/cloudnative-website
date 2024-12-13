@@ -75,17 +75,19 @@ const MobileMenu = ({ handleRemove }) => {
                       }
                     >
                       {subItem.subChild.map((child) => {
-                        const route = `/service-${child.childList
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")
-                          .replace(/[&]/g, "and")
-                          .replace(/[()]/g, "")}`;
-
-                        return (
-                          <li key={child.id}>
-                            <Link href={route}>{child.childList}</Link>
-                          </li>
-                        );
+                                              const route = child.link
+                                              ? child.link
+                                              : `/${child.childList
+                                                  .toLowerCase()
+                                                  .replace(/\s+/g, "-")
+                                                  .replace(/[&]/g, "and")
+                                                  .replace(/[()]/g, "")
+                                                  .replace(/[^\w-]+/g, "")}`;
+                                              return (
+                                                <li key={child.id}>
+                                                  <Link href={route}>{child.childList}</Link>
+                                                </li>
+                                              );
                       })}
                     </ul>
                   )}
