@@ -3498,6 +3498,12 @@ Section Title
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 576px) {
+  .banner-section-four .slide-item {
+  height: 80vh; 
+    
+  }
+}
 .banner-section-four .slide-item:before {
   position: absolute;
   left: 0;
