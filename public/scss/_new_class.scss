@@ -1,0 +1,137 @@
+
+.team-section-two.layout_8{
+    &::before{
+        background-image: none;
+    }
+}
+
+.layout_8{
+    .inner-box{
+        border-right: 4px solid var(--border-theme-color2);
+    }
+}
+
+.layout_8.contact-section-two.pull-up{
+    z-index: 1;
+}
+
+
+
+.layout_6{
+    .image-column{
+        .inner-column{
+            justify-content: center;
+        }
+        .image-2{
+            top: 122px;
+            bottom: unset;
+        }
+    }
+}
+.layout_8{
+    .content-column .inner-column .list-style-three{
+        padding-bottom: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        li{
+            font-size: 18px;
+            width: 50%;
+            padding-right: 20px;
+        }
+    }
+    .content-column .skills .bar-inner .bar{
+        background-color: var(--bg-theme-color2);
+    }
+}
+
+
+.layout_6_dark{
+    .clients-carousel .slide-item {
+        img{
+            background: unset;
+            filter: brightness(0) invert(1);
+            opacity: .4;
+        }
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+        a{
+            &:hover{
+                background: unset;
+            }
+        }
+    }
+}
+.layout_6{
+    .clients-carousel .slide-item {
+        img{
+            // webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            opacity: .4;
+        }
+        &:hover{
+            img{
+                // webkit-filter: grayscale(0);
+                filter: grayscale(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.layout_6{
+    .service-block-four{
+        .inner-box{
+            &:before{
+                background-image: none
+            }
+            &:after {
+                counter-increment: my-sec-counter;
+                content: counter(my-sec-counter, decimal-leading-zero) " ";
+                position: absolute;
+                line-height: 1;
+                right: 20px;
+                top: 50px;
+                font-size: 48px;
+                color: #f4f5f9;
+                transition: all 500ms ease;
+                z-index: 1;
+            }
+        }
+    }
+}
+.layout_7.services-section-three{  
+    margin-top: -80px;  
+    &::after{
+        content: none;
+    }
+}
+
+.layout_7{
+    .contact-form-two.style-two .select2-container--default .select2-selection--single, .contact-form-two.style-two input:not([type=submit]), .contact-form-two.style-two textarea, .contact-form-two.style-two select{
+        border-radius: 0;
+    }
+}
+
+
+.layout_8.why-choose-us{
+    background-color: unset;
+    background-image: url(../images/icons/bg_shape_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .content-column{
+        display: flex;
+        align-items: end;
+    }
+}
+
+
+
+
+  
+  

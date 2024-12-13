@@ -1,0 +1,91 @@
+/*-------------- splash ---------------*/
+
+.background-container {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    text-align: center;
+    padding: 0em;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0px;
+    border-bottom: none;
+    background-color: #00B5AD;
+    background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.95));
+    background-image: radial-gradient(farthest-corner, rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.95));
+  }
+  
+  .background-container .grid {
+    margin: 0em;
+    padding: 15rem 0em;
+  }
+  
+  .background-container {
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 3s ease-in-out 2s;
+    perspective: 1000px;
+  }
+  
+  .background-container:after {
+    position: absolute;
+    z-index: 1;
+    width: 135%;
+    height: 135%;
+    top: 18%;
+    left: 0px;
+    content: '';
+    background: url('https://semantic-ui.com/images/ui.png');
+    transform-style: preserve-3d;
+    animation-name: splash;
+    animation-duration: 15s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.06;
+    transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
+  }
+  
+    @keyframes splash {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 0% -475px;
+      }
+    }
+    
+    @-moz-keyframes splash {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 0% -475px;
+      }
+    }
+    
+    @-webkit-keyframes splash {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 0% -475px;
+      }
+    }
+    
+    @-ms-keyframes splash {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 0% -475px;
+      }
+    }
+    
+    @-o-keyframes splash {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 0% -475px;
+      }
+    }
