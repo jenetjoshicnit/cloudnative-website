@@ -3501,7 +3501,6 @@ Section Title
 @media (max-width: 576px) {
   .banner-section-four .slide-item {
   height: 80vh; 
-    
   }
 }
 .banner-section-four .slide-item:before {
@@ -3558,12 +3557,12 @@ Section Title
   position: relative;
   margin-top: 50px;
 }
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
   .banner-section-four .content-box .btn-box {
-    position: relative;
-    margin-top: 160px;
+    /* position: relative; */
+    margin-bottom: 10px;
   }
-} */
+}
 
 .banner-section-four .banner-carousel .owl-nav {
   -webkit-box-pack: justify;
@@ -12778,6 +12777,11 @@ Page Title
   font-size: 64px;
   color: #ffffff;
   margin-bottom: 17px;
+}
+@media (max-width: 576px) {
+  .page-title .title {
+    font-size: 50px;
+  }
 }
 .page-title .text {
   position: relative;

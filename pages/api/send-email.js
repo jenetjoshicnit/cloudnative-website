@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-require('dotenv').config({ path: '.env.local' });
+require('dotenv').config({ path: '.env' });
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
