@@ -62,7 +62,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                             <li>
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-clock" />
-                                    <span className="title">Send Email</span>
+                                    <span className="title">Office Timing</span>
                                         Mon - Fri : 9 AM - 6 PM <br/> Sat : 9AM - 1PM
                                 </div>
                             </li>

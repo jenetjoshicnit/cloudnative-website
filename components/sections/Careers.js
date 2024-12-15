@@ -8,7 +8,7 @@ const Careers = ({ jobOpenings }) => {
       <Head>
         <title>Careers</title>
         <meta name="description" content="Explore exciting career opportunities at our company." />
-        <link rel="stylesheet" href="/css/careers.css" />
+        {/* <link rel="stylesheet" href="/css/careers.css" /> */}
       </Head>
       <div className="container">
         <header className="header">
@@ -33,11 +33,11 @@ const Careers = ({ jobOpenings }) => {
           )}
         </section>
       </div>
-      {/* <style jsx>{`
+      <style jsx>{`
         .container {
           font-family: var(--text-font);
           padding: 2rem;
-          max-width: 800px;
+          max-width: 1200px;
           margin: auto;
         }
         .header {
@@ -74,62 +74,8 @@ const Careers = ({ jobOpenings }) => {
         .theme-btn .btn-title {
           position: relative;
         }
-        .apply-button {
-          position: relative;
-          font-size: 13px;
-          line-height: 24px;
-          padding: 15px 50px;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          overflow: hidden;
-          text-transform: uppercase;
-          color: var(--theme-color1);
-          background: var(--bg-theme-color2);
-          border-radius: 50px;
-          width: 150px;
-        }
-        .apply-button:before {
-          position: absolute;
-        left: 0;
-        top: 0%;
-        height: 100%;
-        width: 100%;
-        content: "";
-        background-color: var(--bg-theme-color1);
-        -webkit-transform: scale(1, 0);
-                transform: scale(1, 0);
-        -webkit-transform-origin: bottom left;
-                transform-origin: bottom left;
-        transition: -webkit-transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-        -webkit-transition: -webkit-transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-        transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-        transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
-        -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-                transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-        z-index: -1;
-        }
-        .apply-button:hover:before {
-          -webkit-transform-origin: top right;
-                transform-origin: top right;
-        -webkit-transform: scale(1, 1);
-                transform: scale(1, 1);
-        }
-        .apply-button:hover {
-          color: #ffffff;
-        -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        .apply-button.hvr-light:hover {
-          color: var(--theme-color2);
-        }
-        .apply-button.hvr-light:before {
-          background-color: #ffffff;
-        }
-        .apply-button.bg-light:not(hover) {
-          background-color: #ffffff !important;
-        }
       `}
-      </style> */}
+      </style>
 
     </>
   );
