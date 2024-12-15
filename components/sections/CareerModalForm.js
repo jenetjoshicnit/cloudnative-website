@@ -251,9 +251,9 @@ const CareerFormModal = () => {
             margin-top: 20px;
             font-size: 13px;
             width:100px;
-            right: 20px;
-            bottom: 10px;
-        }
+            margin-left: auto;
+            display: block;
+            }
 
         .close {
             position: absolute;
