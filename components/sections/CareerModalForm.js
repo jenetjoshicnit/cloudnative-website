@@ -152,9 +152,8 @@ const CareerFormModal = () => {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             position: relative;
             font-family: var(--text-font);
-            padding-bottom:60px;
         }
-          .container {
+        .container {
           font-family: var(--text-font);
           padding: 2rem;
           max-width: 800px;
@@ -243,7 +242,10 @@ const CareerFormModal = () => {
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
+        #comments {
+            resize: none;
+            overflow-y: scroll;
+        }
         .modal-content form button {
             background-color: #022a51;
             color: white;
@@ -261,6 +263,7 @@ const CareerFormModal = () => {
             right: 15px;
             font-size: 28px;
             cursor: pointer;
+            z-index: 1001;
         }
         @media (max-width: 600px) {
             .modal-content {

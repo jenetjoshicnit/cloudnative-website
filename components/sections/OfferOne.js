@@ -14,33 +14,29 @@ const OfferOne = () => {
                     throw new Error(`Error ${response.status}: ${response.statusText}`);
                 }
                 const res = await response.json();
-                setData(res?.data?.[0] || null); // Safely access the first object
+                setData(res?.data?.[0] || null);
             } catch (err) {
                 console.error("Error fetching data:", err);
-                setError(err.message); // Store the error message
+                setError(err.message);
             } finally {
-                setIsLoading(false); // Stop loading spinner
+                setIsLoading(false);
             }
         };
         fetchData();
     }, []);
 
-    // Loading State
     if (isLoading) {
-        return <div>Loading...</div>; // Replace with a spinner or skeleton loader
+        return <></>;
     }
 
-    // Error State
     if (error) {
-        return <div>Error: {error}</div>; // Show the error to the user
+        return <div>Error: {error}</div>;
     }
 
-    // Fallback if data is null
     if (!data) {
         return <div>No data available.</div>;
     }
 
-    // Destructure with fallback values to avoid errors
     const {
         shortTitle = "No Subtitle Available",
         title = "No Title Available",
@@ -59,7 +55,6 @@ const OfferOne = () => {
             <section className="offer-section">
                 <div className="auto-container">
                     <div className="row">
-                        {/* Content Column */}
                         <div className="content-column col-lg-6 col-md-12">
                             <div className="inner-column">
                                 <div className="sec-title light">
@@ -83,7 +78,6 @@ const OfferOne = () => {
                             </div>
                         </div>
 
-                        {/* Image Column */}
                         <div className="image-column col-lg-6 col-md-12 col-sm-12">
                             <div className="inner-column">
                                 <div className="image-box">

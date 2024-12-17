@@ -2,8 +2,10 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config) => {
-    config.optimization.minimize = false;
+  webpack: (config, { dev }) => {
+    if (dev) {
+      config.optimization.minimize = false;
+    }
     return config;
   },
   env: {
@@ -11,11 +13,8 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   },
   images: {
-    // domains: ['localhost', 'localhost:1337'],
-    // domains: ['localhost'],
     domains: ['admin.cnit-solutions.com'],
   },
-  // distDir: 'dist_build',
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
