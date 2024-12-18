@@ -4,9 +4,9 @@ import MobileMenu from './MobileMenu';
 import Image from 'next/image'
 
 import NavLinks from './NavLinks';
-import LogoWhite from './../../public/images/logo.png';
-import cnitWhite from './../../public/images/site-logo-re.png';
-import cnitDark from './../../public/images/site-logo-white.png';
+// import LogoWhite from './../../public/images/logo.png';
+// import cnitWhite from './../../public/images/site-logo-re.png';
+// import cnitDark from './../../public/images/site-logo-white.png';
 
 const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
     const handleRemove = () => {
@@ -19,7 +19,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                 <div className="header-lower">
                     <div className="main-box">
                         <div className="logo-box">
-                            <div className="logo"><Link href="/"><Image src={cnitWhite} alt="Logo" /></Link></div>
+                            <div className="logo"><Link href="/"><Image src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/site_logo_re_629bb50ea1.png`} alt="Logo" width={317} height={76} priority /></Link></div>
                         </div>
                         <div className="nav-outer">
                             <nav className="nav main-menu">
@@ -40,7 +40,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                     <div className="menu-backdrop" />
                     <nav className="menu-box">
                         <div className="upper-box">
-                            <div className="nav-logo"><Link href="/"><Image src={LogoWhite} alt="Logo"/></Link></div>
+                            <div className="nav-logo"><Link href="/"><Image src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/logo_bb1cf0dbf7.png`} alt="Logo" width={317} height={76} /></Link></div>
                             <div className="close-btn" onClick={handleRemove}><i className="icon fa fa-times" /></div>
                         </div>
                         <MobileMenu handleRemove={handleRemove}/>
@@ -91,7 +91,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                     <div className="auto-container">
                         <div className="inner-container">
                             <div className="logo">
-                                <Link href="/" title><Image src={cnitDark} alt="Logo" /></Link>
+                                <Link href="/" title><Image src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/site_logo_white_c02a19c22f.png`} alt="Logo" width={317} height={76} /></Link>
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">
