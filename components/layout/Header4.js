@@ -75,7 +75,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                         </ul>
                     </nav>
                 </div>
-                <div className="search-popup">
+                {/* <div className="search-popup">
                     <span className="search-back-drop" />
                     <button className="close-search"><span className="fa fa-times" /></button>
                     <div className="search-inner">
@@ -86,7 +86,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> */}
                 <div className={`sticky-header ${scroll ? "fixed-header animated slideInDown" : ""}`}>
                     <div className="auto-container">
                         <div className="inner-container">
