@@ -17,6 +17,7 @@
     "eslint-config-next": "13.0.4",
     "formidable": "^3.5.2",
     "fs": "^0.0.1-security",
+    "google-reviews-widget": "^1.0.4",
     "isomorphic-unfetch": "^4.0.2",
     "next": "13.0.4",
     "next-sitemap": "^4.2.3",
