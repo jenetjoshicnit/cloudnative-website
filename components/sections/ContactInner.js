@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+
 const ContactInner = () => {
     const [formData, setFormData] = useState({
         full_name: '',
@@ -141,6 +142,9 @@ const ContactInner = () => {
                                                     {loading ? 'Sending...' : 'Send a message'}
                                                 </button>
                                             </div>
+                                            
+                                           
+
                                         </div>
                                     </form>
                                     {responseMessage && <div>{responseMessage}</div>}
