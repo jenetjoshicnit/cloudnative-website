@@ -69,7 +69,7 @@ const Industries = () => {
               <div className="inner-box">
                 <i className={item.IconClass} />
                 <h6 className="title">
-                  <Link href="/page-service-details">{item.title}</Link>
+                  {item.title}
                 </h6>
               </div>
             </div>
