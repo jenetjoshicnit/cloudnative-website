@@ -2,7 +2,7 @@
 import React from 'react'
 import GoogleReviewsWidget from 'google-reviews-widget'
 
-function GooglrReviews() {
+function GoogleReviews() {
   return (
      <div className=" mt-5 mb-5">
         <div className="row justify-content-center">
@@ -15,10 +15,16 @@ function GooglrReviews() {
         </div>
 
         <div className="row justify-content-center">
-          <div className="col-lg-10 col-xl-8"> {/* Adjust width for widget if needed */}
+          {/* <div className="col-lg-10 col-xl-8">  */}
             {/* This is where the widget itself will render. It will have its own structure. */}
-            <GoogleReviewsWidget instanceId='1u5AAWBnP7lhL0r4bOUX' />
-          </div>
+            <GoogleReviewsWidget instanceId='1u5AAWBnP7lhL0r4bOUX' /> 
+
+            {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
+             {/* <script src="https://static.elfsight.com/platform/platform.js" async></script>
+              <div className="elfsight-app-a142bc09-dc32-4a16-9b78-3a4d12cb73ce" data-elfsight-app-lazy></div> 
+
+               */}
+          {/* </div> */}
         </div>
 
       </div>
@@ -26,4 +32,4 @@ function GooglrReviews() {
   )
 }
 
-export default GooglrReviews
+export default GoogleReviews;

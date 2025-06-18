@@ -1,3 +1,6 @@
+//import dynamic from 'next/dynamic';//now editted
+
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from "../components/layout/Layout";
@@ -19,9 +22,22 @@ import ServiceOne from "../components/sections/ServiceOne";
 import Industries from '../components/sections/Industries';
 import BlogTwo from '../components/sections/BlogTwo';
 import ServiceThree from "../components/sections/ServiceThree";
-import GoogleReviewsWidget from "google-reviews-widget"
+//import GoogleReviewsWidget from "google-reviews-widget"
 // import GooglrReviews from '../components/sections/GoogleReviews';
 import GoogleReviews from '../components/sections/GoogleReviews';
+
+
+
+//now editted
+// const DynamicGooglrReviews = dynamic(
+//   () => import('../components/sections/GoogleReviews'), // ADJUST THE PATH to your GooglrReviews.js file
+//   {
+//     ssr: false, // This is crucial for preventing hydration errors with client-side widgets
+//     loading: () => <p style={{ textAlign: 'center', padding: '20px' }}>Loading reviews...</p> // Optional: A loading indicator
+//   }
+// );
+
+
 
 export default function Home() {
     const title = "Cloud Native IT Solutions";
@@ -68,10 +84,10 @@ export default function Home() {
                 {/* <FaqOne /> */}
                 <BlogTwo />
                  {/* <GoogleReviewsWidget instanceId='1u5AAWBnP7lhL0r4bOUX' /> */}
-                 <GoogleReviews />
+                 {/* <GoogleReviews /> */}
                 <CtaTwo />
                 <ServiceThree />
-               
+               <GoogleReviews />
                 <MapOne />
             </Layout>
         </>

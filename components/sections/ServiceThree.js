@@ -36,7 +36,8 @@ const ServiceThree = () => {
                                             src={`${process.env.NEXT_PUBLIC_API_URL}${partner.image.url}`}
                                             alt={partner.image.title}
                                             width={3000}
-                                            height={2000} />
+                                            height={2000} 
+                                            />
                                         <h6 className="title">
                                             {partner.title}
                                         </h6>
