@@ -1,0 +1,144 @@
+.headingContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.headingContainer .subTitle {
+  font-size: 1.5rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.headingContainer .mainTitle {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  line-height: 1.2;
+}
+
+.logos-container {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.logo-item {
+  min-width: 150px;
+  height: 50px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.logo-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logoItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  background: transparent !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); 
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logoWrapper :global(img) {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.logoItem {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logoBox {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 50px;
+  display: block;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .headingContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .headingContainer .subTitle {
+    font-size: 1rem;
+  }
+  
+  .headingContainer .mainTitle {
+    font-size: 1.5rem;
+  }
+}

@@ -18,6 +18,9 @@ function GooglrReviews() {
           <div className="col-lg-10 col-xl-8"> {/* Adjust width for widget if needed */}
             {/* This is where the widget itself will render. It will have its own structure. */}
             <GoogleReviewsWidget instanceId='1u5AAWBnP7lhL0r4bOUX' />
+            {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
+            {/* <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-ec2dcb81-a517-4b70-982f-a1373d2f09f7" data-elfsight-app-lazy></div> */}
           </div>
         </div>
 
