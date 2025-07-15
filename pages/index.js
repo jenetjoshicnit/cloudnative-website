@@ -22,6 +22,7 @@ import ServiceThree from "../components/sections/ServiceThree";
 import GoogleReviewsWidget from "google-reviews-widget"
 // import GooglrReviews from '../components/sections/GoogleReviews';
 import GoogleReviews from '../components/sections/GoogleReviews';
+import ClientLogos from '../components/sections/clientLogos';
 
 export default function Home() {
     const title = "Cloud Native IT Solutions";
@@ -67,8 +68,9 @@ export default function Home() {
                 {/* <ClientOne /> */}
                 {/* <FaqOne /> */}
                 <BlogTwo />
+                <ClientLogos />
                  {/* <GoogleReviewsWidget instanceId='1u5AAWBnP7lhL0r4bOUX' /> */}
-                 <GoogleReviews />
+                 {/* <GoogleReviews /> */}
                 <CtaTwo />
                 <ServiceThree />
                
