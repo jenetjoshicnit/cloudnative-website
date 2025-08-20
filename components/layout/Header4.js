@@ -91,7 +91,7 @@ const Header4 = ({ handleOpen, searchToggle, handleToggle, scroll }) => {
                     <div className="auto-container">
                         <div className="inner-container">
                             <div className="logo">
-                                <Link href="/" title><Image src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/site_logo_white_c02a19c22f.png`} alt="Logo" width={317} height={76} /></Link>
+                                <Link href="/"><Image src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/site_logo_white_c02a19c22f.png`} alt="Logo" width={317} height={76} /></Link>
                             </div>
                             <div className="nav-outer">
                                 <nav className="main-menu">

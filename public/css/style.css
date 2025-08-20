@@ -2203,6 +2203,23 @@ Main Header
   font-weight: 900;
   z-index: 5;
 }
+
+.main-menu .navigation > li > ul > li.dropdown > ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 220px;
+  padding: 10px 0;
+  background-color: #ffffff;
+  margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
 .main-menu .navigation > li > ul > li.dropdown:hover > ul {
   visibility: visible;
   opacity: 1;
@@ -15032,4 +15049,61 @@ Sidebar
 }
 .VJL48qbQzWENTFAh1Knk {
   display: none !important;
+}
+
+/* Submenu (3rd level) dropdown styling */
+.sub-dropdown {
+  position: absolute;
+  left: 100%;         /* Moves it to the right of the parent */
+  top: 0;
+  min-width: 220px;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+/* Show sub-dropdown on hover */
+li.dropdown:hover > .sub-dropdown {
+  display: block;
+}
+
+/* Submenu item styling */
+.sub-dropdown li {
+  position: relative;
+  border-bottom: 1px solid #ebf1f5;
+  padding: 0 20px;
+}
+
+.sub-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.sub-dropdown li a {
+  display: block;
+  padding: 10px 0;
+  color: var(--bg-theme-color1);
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.sub-dropdown li a:hover {
+  color: var(--theme-color2);
+}
+
+/* Right arrow indicator for dropdown items */
+.sub-dropdown li.dropdown > a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  position: absolute;
+  right: 0;
+  top: 11px;
+  display: block;
+  line-height: 24px;
+  font-size: 11px;
+  font-weight: 900;
+  z-index: 5;
 }

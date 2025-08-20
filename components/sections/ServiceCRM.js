@@ -49,7 +49,7 @@ const Serviceone = ({ service }) => {
                       <ul>
                         {subServices.map((subService, index) => (
                           <li key={subService.id}>
-                            <Link className={(index === 2) ? 'current': ''} href={subService.link || ''}>
+                            <Link className={(index === 3) ? 'current': ''} href={subService.link || ''}>
                               <i className="fas fa-angle-right"></i>
                               <span>{subService.subServiceTitle}</span>
                             </Link>

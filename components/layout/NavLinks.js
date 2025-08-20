@@ -31,7 +31,7 @@ const NavLinks = ({ extraClassName }) => {
   if (!navbarData) return <></>;
 
   return (
-    <ul className={`navigation ${extraClassName}`}>
+    <ul className={`main-menu navigation ${extraClassName}`}>
       {navbarData.map((menuItem) => (
         <li
           key={menuItem.id}
@@ -40,11 +40,11 @@ const NavLinks = ({ extraClassName }) => {
           <Link href={menuItem.link || "#"}>{menuItem.menuItem}</Link>
 
           {menuItem.subMenu.length > 0 && (
-            <ul 
-            className={`sub-menu ${dropdowns[menuItem.id] ? "open" : ""}`}
-            onMouseEnter={() => toggleDropdown(menuItem.id)}
-            onMouseLeave={() => toggleDropdown(menuItem.id)}
-          >
+            <ul
+              className={`sub-menu ${dropdowns[menuItem.id] ? "open" : ""}`}
+              onMouseEnter={() => toggleDropdown(menuItem.id)}
+              onMouseLeave={() => toggleDropdown(menuItem.id)}
+            >
               {menuItem.subMenu.map((subItem) => (
                 <li
                   key={subItem.id}
@@ -59,17 +59,33 @@ const NavLinks = ({ extraClassName }) => {
                   {subItem.subChild && (
                     <ul className="sub-dropdown">
                       {subItem.subChild.map((child) => {
-                        const route = child.link
-                        ? child.link
-                        : `/${child.childList
+                        const childRoute = child.link
+                          ? child.link
+                          : `/${child.childList
                             .toLowerCase()
                             .replace(/\s+/g, "-")
                             .replace(/[&]/g, "and")
                             .replace(/[()]/g, "")
                             .replace(/[^\w-]+/g, "")}`;
+
                         return (
-                          <li key={child.id}>
-                            <Link href={route}>{child.childList}</Link>
+                          <li key={child.id} className={child.subChildList?.length ? "dropdown" : ""}>
+                            <Link href={childRoute}>{child.childList}</Link>
+                            {/* <Link href={childRoute}>
+                              {child.childList}
+                              {child.subChildList?.length > 0 && (
+                                <span style={{ marginLeft: "8px" }}>{'>'}</span>
+                              )}
+                            </Link> */}
+                            {child.subChildList && child.subChildList.length > 0 && (
+                              <ul className="sub-dropdown">
+                                {child.subChildList.map((item) => (
+                                  <li key={item.id}>
+                                    <Link href={item.link || "#"}>{item.item}</Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </li>
                         );
                       })}
@@ -86,4 +102,3 @@ const NavLinks = ({ extraClassName }) => {
 };
 
 export default NavLinks;
-
